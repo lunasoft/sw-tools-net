@@ -21,14 +21,14 @@ internal class CustomAssert
             throw NotNullException.ForNullValue();
         bool condition = result.Status.Equals(ResponseStatus.error.ToString());
         if (!condition) 
-            throw TrueException.ForNonTrueValue($"Se esperaba {ResponseStatus.error} pero fue e {result.Status}", condition);
+            throw TrueException.ForNonTrueValue($"Se esperaba {ResponseStatus.error} pero fue {result.Status}", condition);
         condition = !string.IsNullOrEmpty(result.Message);
         if (!condition) 
             throw TrueException.ForNonTrueValue($"Se esperaba que Message tuviera un valor pero fue {result.Message}", condition);
         if (expectedMessage != null)
         {
             condition = result.Message.Equals(expectedMessage);
-            if (condition)
+            if (!condition)
                 throw TrueException.ForNonTrueValue($"Se esperaba Message igual a {expectedMessage} pero fue {result.Message}", condition);
         }
     }
