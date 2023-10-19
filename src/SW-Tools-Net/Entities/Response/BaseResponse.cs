@@ -16,11 +16,11 @@ public class BaseResponse<T>
     }
     internal void SetMessage(string message) 
     {
-        this.Message = message != null || !String.IsNullOrEmpty(message) ? message 
+        this.Message = !String.IsNullOrEmpty(message) ? message 
             : throw new ArgumentException("El parámetro message es requerido.", nameof(message));
     }
     internal void SetData(T data)
     {
-        Data = data != null ? data : throw new ArgumentException("El parámetro data es requerido.", nameof(data));
+        Data = data ?? throw new ArgumentException("El parámetro data es requerido.", nameof(data));
     }
 }
