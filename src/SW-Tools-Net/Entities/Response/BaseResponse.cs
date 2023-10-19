@@ -17,7 +17,7 @@ public class BaseResponse<T>
     internal void SetMessage(string message) 
     {
         this.Message = message != null || !String.IsNullOrEmpty(message) ? message 
-            : throw new ArgumentException("Son requeridos las parámetros status y message.", nameof(message));
+            : throw new ArgumentException("El parámetro message es requerido.", nameof(message));
     }
     internal void SetData(T data)
     {
