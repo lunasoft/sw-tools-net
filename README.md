@@ -86,8 +86,12 @@ public class BaseResponse<T>
 ```csharp
 using SW.Tools.Services.Sign;
 
+string cfdi = Resource.GetInvoice("cfdi40.xml");
+byte[] pfx = Resource.GetPfx("h&e951128469.pfx");
+string password = "12345678a";
+
 Sign sign = new();
-var result = sign.SignCfdi(Resource.GetInvoice("cfdi40.xml");
+var result = sign.SignCfdi(cfdi, pfx, password);
 
 var signedCfdi = result.Data.Xml;
 ```
@@ -98,8 +102,12 @@ var signedCfdi = result.Data.Xml;
 ```csharp
 using SW.Tools.Services.Sign;
 
+string retention = Resource.GetInvoice("retention20.xml");
+byte[] pfx = Resource.GetPfx("h&e951128469.pfx");
+string password = "12345678a";
+
 Sign sign = new();
-var result = sign.SignRetention(Resource.GetInvoice("retention20.xml");
+var result = sign.SignRetention(retention, pfx, password);
 
 var signedRetencion = result.Data.Xml;
 ```
