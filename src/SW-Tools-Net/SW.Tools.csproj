@@ -3,7 +3,7 @@
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <RootNamespace>SW.Tools</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-	<VersionPrefix>0.0.2.1</VersionPrefix>
+	<VersionPrefix>0.0.3.1</VersionPrefix>
 	<Product>SW.Tools.NET</Product>
 	<Company>SW Sapien</Company>
 	<Authors>SW_Aeyrton</Authors>
@@ -101,5 +101,8 @@
     <EmbeddedResource Include="Resources\Xslt\Retention20\sectorfinanciero.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Retention20\ServiciosPlataformasTecnologicas10.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Retention20\utilerias.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ChilkatDnCore" Version="9.5.0.70" />
   </ItemGroup>
 </Project>

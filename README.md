@@ -16,6 +16,7 @@ Librería de clases que proporciona herramientas y utilidades aplicables para la
 - [Uso](#uso)
   - [Sellar CFDI](#sellar-cfdi)
   - [Sellar Retencion](#sellar-retención)
+  - [Crear PFX](#crear-pfx)
 - [Contribuir](#contribuir)
 - [Creadores](#creadores)
 - [Licencia](#licencia)
@@ -110,6 +111,20 @@ Sign sign = new();
 var result = sign.SignRetention(retention, pfx, password);
 
 var signedRetencion = result.Data.Xml;
+```
+
+### Crear PFX
+
+```csharp
+using SW.Tools.Services.Certificate;
+
+byte[] bytesCer = File.ReadAllBytes("h&e951128469.cer");
+byte[] bytesKey = File.ReadAllBytes("h&e951128469.key");
+string passwordCer = "12345678a";
+
+Certificate certificate = new();
+var result = certificate.CreatePfx(bytesCer, bytesKey, passwordCer);
+var pfx = result.Data.Pfx;
 ```
 
 ## Contribuir
