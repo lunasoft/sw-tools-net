@@ -103,6 +103,6 @@
     <EmbeddedResource Include="Resources\Xslt\Retention20\utilerias.xslt" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BouncyCastle.Cryptography" Version="2.2.1" />
+    <PackageReference Include="ChilkatDnCore" Version="9.5.0.70" />
   </ItemGroup>
 </Project>
