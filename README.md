@@ -118,12 +118,12 @@ var signedRetencion = result.Data.Xml;
 ```csharp
 using SW.Tools.Services.Certificate;
 
-byte[] BytesCer = File.ReadAllBytes("h&e951128469.cer");
-byte[] BytesKey = File.ReadAllBytes("h&e951128469.key");
+byte[] bytesCer = File.ReadAllBytes("h&e951128469.cer");
+byte[] bytesKey = File.ReadAllBytes("h&e951128469.key");
 string passwordCer = "12345678a";
 
 Certificate certificate = new();
-var result = certificate.CreatePfx(BytesCer, BytesKey, passwordCer);
+var result = certificate.CreatePfx(bytesCer, bytesKey, passwordCer);
 var pfx = result.Data.Pfx;
 ```
 
