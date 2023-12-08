@@ -35,6 +35,24 @@
     <None Update="Resources\Certificates\ut_pfx_h&amp;e951128469.pfx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Xml\ut_accept.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Xml\ut_accept_nodeSign.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Xml\ut_accept_Signed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Xml\ut_cancelation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Xml\ut_cancelation_nodeSign.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Xml\ut_cancelation_Signed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Xml\ut_cfdi40.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

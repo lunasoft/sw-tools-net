@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using SW.Tools.Transforms;
+using Chilkat;
 
 namespace SW.Tools.Helpers;
 
@@ -24,11 +25,28 @@ internal class CryptoHelper
     internal static (string b64Certificate, string certificateNumber) GetCertificateValues(X509Certificate2 certificate)
     {
         string hexadecimalString = certificate.SerialNumber;
-        StringBuilder sb = new();
+        Chilkat.StringBuilder sb = new();
         for (int i = 0; i <= hexadecimalString.Length - 2; i += 2)
         {
             sb.Append(Convert.ToString(Convert.ToChar(Int32.Parse(hexadecimalString.Substring(i, 2), System.Globalization.NumberStyles.HexNumber))));
         }
-        return (Convert.ToBase64String(certificate.GetRawCertData()),sb.ToString());
+        return (Convert.ToBase64String(certificate.GetRawCertData()), sb.ToString());
+    }
+    internal static (XmlDSigGen signature, string issuerName, string serialNumber) GetSignatureSha1(Chilkat.Pfx pfx, string location)
+    {
+        new Global().UnlockBundle("LUNASF.CB1122019_6AkG5xXC37m0");
+        XmlDSigGen gen = new();
+        Cert cert = pfx.GetCert(0);
+        gen.SigLocation = location;
+        gen.SigNamespacePrefix = "";
+        gen.SignedInfoCanonAlg = "C14N";
+        gen.SignedInfoDigestMethod = "sha1";
+        gen.AddSameDocRef("", "sha1", "", "", "");
+        gen.SetX509Cert(cert, true);
+        gen.KeyInfoType = "X509Data";
+        gen.X509Type = "Certificate";
+        gen.Behaviors = "ForceAddEnvelopedSignatureTransform";
+        gen.Behaviors.Trim();
+        return (gen, cert.IssuerDN, cert.SerialNumber);
     }
 }

@@ -22,7 +22,7 @@ namespace SW.Tools.UnitTest
             CustomAssert.ResultIsSuccess(result);
             Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
             CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
-        }
+        }       
         [Fact]
         public void Sign_Cfdi40WithComplement_Success()
         {
