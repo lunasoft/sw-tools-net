@@ -25,7 +25,7 @@ internal class CryptoHelper
     internal static (string b64Certificate, string certificateNumber) GetCertificateValues(X509Certificate2 certificate)
     {
         string hexadecimalString = certificate.SerialNumber;
-        Chilkat.StringBuilder sb = new();
+        System.Text.StringBuilder sb = new();
         for (int i = 0; i <= hexadecimalString.Length - 2; i += 2)
         {
             sb.Append(Convert.ToString(Convert.ToChar(Int32.Parse(hexadecimalString.Substring(i, 2), System.Globalization.NumberStyles.HexNumber))));
