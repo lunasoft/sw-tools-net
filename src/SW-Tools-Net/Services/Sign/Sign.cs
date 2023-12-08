@@ -41,6 +41,5 @@ public class Sign : SignService, ISign<SignResponse>
     public SignResponse SignXml(string xml, byte[] pfx, string password)
     {
         return _handler.Execute(() => SignatureService(xml, pfx, password));
-        //throw new NotImplementedException();
     }
 }
