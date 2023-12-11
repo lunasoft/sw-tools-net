@@ -20,7 +20,18 @@ namespace SW.Tools.UnitTest
             _password = "12345678a";
         }
         [Fact]
-        public void Sign_Cancelattion_Succes()
+        public void Sign_Cancellation_Succes()
+        {
+            Sign sign = new();
+            CustomAssert asserts = new CustomAssert();
+            var result = sign.SignXml(ResourceHelper.GetInvoice("cancelation.xml", true),
+                ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), _password);
+            CustomAssert.ResultIsSuccess(result);
+            Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
+            asserts.CancellationAcceptRejectIsSuccess(result.Data.Xml, true);
+        }
+        [Fact]
+        public void SignedXml_Cancellation_Succes()
         {
             Sign sign = new();
             CustomAssert asserts = new CustomAssert();
@@ -31,18 +42,7 @@ namespace SW.Tools.UnitTest
             asserts.CancellationAcceptRejectIsSuccess(result.Data.Xml, true);
         }
         [Fact]
-        public void SignedXml_Cancelattion_Succes()
-        {
-            Sign sign = new();
-            CustomAssert asserts = new CustomAssert();
-            var result = sign.SignXml(ResourceHelper.GetInvoice("cancelation_Signed.xml", true),
-                ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), _password);
-            CustomAssert.ResultIsSuccess(result);
-            Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
-            asserts.CancellationAcceptRejectIsSuccess(result.Data.Xml, true);
-        }
-        [Fact]
-        public void Sign_CancelattionWithSignatureNode_Succes()
+        public void Sign_CancellationWithSignatureNode_Succes()
         {
             Sign sign = new();
             CustomAssert asserts = new CustomAssert();

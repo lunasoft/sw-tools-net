@@ -1,6 +1,5 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
-using System.Text;
 using SW.Tools.Transforms;
 using Chilkat;
 
@@ -11,7 +10,7 @@ internal class CryptoHelper
     internal static string GetHashedStringSha256(string originalChain, X509Certificate2 certificate)
     {
         using SHA256 sha256 = SHA256.Create();
-        byte[] dataBytes = Encoding.UTF8.GetBytes(originalChain);
+        byte[] dataBytes = System.Text.Encoding.UTF8.GetBytes(originalChain);
         byte[] hashedBytes = sha256.ComputeHash(dataBytes);
         using RSA rsa = certificate.GetRSAPrivateKey();
         byte[] signature = rsa != null ? rsa.SignHash(hashedBytes, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1)
@@ -34,7 +33,7 @@ internal class CryptoHelper
     }
     internal static (XmlDSigGen signature, string issuerName, string serialNumber) GetSignatureSha1(Chilkat.Pfx pfx, string location)
     {
-        new Global().UnlockBundle("LUNASF.CB1122019_6AkG5xXC37m0");
+        new Global().UnlockBundle(Environment.GetEnvironmentVariable("SDK_CHILKATLICENCE"));
         XmlDSigGen gen = new();
         Cert cert = pfx.GetCert(0);
         gen.SigLocation = location;
