@@ -10,13 +10,8 @@ namespace SW.Tools.UnitTest.Helpers;
 
 internal class CustomAssert
 {
-    private readonly Cancelation _cancellation;
-    private readonly AcceptReject _acceptReject;
-    public CustomAssert()
-    {
-        _acceptReject = new (BuildTest.UrlService, BuildTest.Token);
-        _cancellation = new(BuildTest.UrlService, BuildTest.Token);
-    }
+    private Cancelation cancellation;
+    private AcceptReject acceptReject;
     internal static void ResultIsSuccess<T>(BaseResponse<T> result)
     {
         if (result == null || string.IsNullOrEmpty(result.Status) || result.Data == null) 
@@ -51,16 +46,19 @@ internal class CustomAssert
     }
     internal void CancellationAcceptRejectIsSuccess(string xml, bool isCancellation = false)
     {
+        acceptReject = new(BuildTest.UrlService, BuildTest.Token);
+        cancellation = new(BuildTest.UrlService, BuildTest.Token);
+
         if (isCancellation)
         {
-            var result = _cancellation.CancelarByXMLAsync(Encoding.UTF8.GetBytes(xml)).Result;
+            var result = cancellation.CancelarByXMLAsync(Encoding.UTF8.GetBytes(xml)).Result;
             var condition = result != null && result.Status.Equals(ResponseStatus.success.ToString());
             if (!condition)
                 throw TrueException.ForNonTrueValue("Cancelación no fue exitoso.", condition);
         }
         else
         {
-            var result = _acceptReject.AcceptByXML(Encoding.UTF8.GetBytes(xml)).Result;
+            var result = acceptReject.AcceptByXML(Encoding.UTF8.GetBytes(xml)).Result;
             var condition = result != null && result.Status.Equals(ResponseStatus.success.ToString());
             if (!condition)
                 throw TrueException.ForNonTrueValue("AceptacionRechazo no fue exitoso.", condition);

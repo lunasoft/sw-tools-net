@@ -7,17 +7,22 @@ internal partial class Validation
         if (String.IsNullOrEmpty(xml) || pfx == null || String.IsNullOrEmpty(password))
             throw new Exception("Los parámetros xml, pfx y password son requeridos.");
     }
-    internal static void ValidateInvoice(string tag, bool isRetention = false)
+    internal static void ValidateInvoice(string tag)
     {
-        if (!isRetention && (tag != "cfdi:Comprobante" && tag != "Cancelacion" && tag != "SolicitudAceptacionRechazo"))
+        try
         {
-            throw new ArgumentException("El XML no es un comprobante CFDI, Cancelacion o AceptacionRechazo válido.");
+            if (tag != "cfdi:Comprobante" && tag != "Cancelacion" && tag != "SolicitudAceptacionRechazo" && tag != "retenciones:Retenciones")
+            {
+                throw new ArgumentException("El XML no es un comprobante CFDI, Cancelación, AceptacionRechazo o Retención válido.");
+            }
+
         }
-        else if (isRetention && tag != "retenciones:Retenciones")
+        catch (Exception ex)
         {
-            throw new ArgumentException("El XML no es una retención válida.");
+            throw new ArgumentException("El XML se encuentra corrupto o es inválido. " + ex.Message);
         }
     }
+        
     internal static void ValidateInvoiceVersion(string tag, string version, bool isRetention) 
     {
         if (!isRetention && (tag == "cfdi:Comprobante" && version != "4.0") 

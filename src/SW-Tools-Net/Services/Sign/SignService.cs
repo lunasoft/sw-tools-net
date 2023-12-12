@@ -22,7 +22,7 @@ public class SignService
             cfdiDoc.LoadXml(xml);
 
             string tag = cfdiDoc.DocumentElement.Name;
-            Validation.ValidateInvoice(tag, isRetention);
+            Validation.ValidateInvoice(tag);
 
             string version = cfdiDoc.DocumentElement.GetAttribute("Version");
             Validation.ValidateInvoiceVersion(tag, version, isRetention);
