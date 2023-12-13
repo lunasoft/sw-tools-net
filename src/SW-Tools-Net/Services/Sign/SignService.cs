@@ -3,7 +3,6 @@ using SW.Tools.Helpers;
 using SW.Tools.Validations;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace SW.Tools.Services.Sign;
