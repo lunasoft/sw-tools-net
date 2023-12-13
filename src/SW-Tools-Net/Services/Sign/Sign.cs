@@ -40,6 +40,6 @@ public class Sign : SignService, ISign<SignResponse>
     /// <exception cref="NotImplementedException"></exception>
     public SignResponse SignXml(string xml, byte[] pfx, string password)
     {
-        throw new NotImplementedException();
+        return _handler.Execute(() => SignatureService(xml, pfx, password));
     }
 }
