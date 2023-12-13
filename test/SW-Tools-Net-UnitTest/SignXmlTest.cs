@@ -13,7 +13,6 @@ namespace SW.Tools.UnitTest
             _password = "12345678a";
             _sign = new();
             _asserts = new();
-            _sign = new();
         }
         [Fact]
         public void Sign_Cancellation_Succes()
