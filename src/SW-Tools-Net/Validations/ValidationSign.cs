@@ -9,20 +9,12 @@ internal partial class Validation
     }
     internal static void ValidateInvoice(string tag)
     {
-        try
+        if (tag != "cfdi:Comprobante" && tag != "Cancelacion" && tag != "SolicitudAceptacionRechazo" && tag != "retenciones:Retenciones")
         {
-            if (tag != "cfdi:Comprobante" && tag != "Cancelacion" && tag != "SolicitudAceptacionRechazo" && tag != "retenciones:Retenciones")
-            {
-                throw new ArgumentException("El XML no es un comprobante CFDI, Cancelación, AceptacionRechazo o Retención válido.");
-            }
-
-        }
-        catch (Exception ex)
-        {
-            throw new ArgumentException("El XML se encuentra corrupto o es inválido. " + ex.Message);
+            throw new ArgumentException("El XML no es un comprobante CFDI, Cancelación, AceptacionRechazo o Retención válido.");
         }
     }
-        
+
     internal static void ValidateInvoiceVersion(string tag, string version, bool isRetention) 
     {
         if (!isRetention && (tag == "cfdi:Comprobante" && version != "4.0") 
