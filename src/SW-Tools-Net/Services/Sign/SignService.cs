@@ -60,29 +60,19 @@ public class SignService
 
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(xmlSignature);
-
             X509Certificate2 cert = new X509Certificate2(pfx, password);
-
             RSA key = cert.GetRSAPrivateKey();
-
-            SignedXml signedXml = new SignedXml(xmlDoc);
-            signedXml.SigningKey = key;
-
+            SignedXml signedXml = new SignedXml(xmlDoc) { SigningKey = key };
             Reference reference = new Reference(string.Empty);
             reference.AddTransform(new XmlDsigEnvelopedSignatureTransform());
-
             KeyInfoX509Data keyInfoData = new KeyInfoX509Data(cert);
             keyInfoData.AddIssuerSerial(cert.IssuerName.Name, cert.SerialNumber);
-
             KeyInfo keyInfo = new KeyInfo();
             keyInfo.AddClause(keyInfoData);
-
             signedXml.KeyInfo = keyInfo;
             signedXml.AddReference(reference);
             signedXml.ComputeSignature();
-
             XmlElement signatureElement = signedXml.GetXml();
-
             xmlDoc.DocumentElement.AppendChild(xmlDoc.ImportNode(signatureElement, true));
 
             return XmlHelper.RemoveInvalidCharsXml(xmlDoc.OuterXml);
