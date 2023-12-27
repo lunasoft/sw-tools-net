@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace SW.Tools.Helpers
 {
@@ -25,22 +26,25 @@ namespace SW.Tools.Helpers
         }
         internal static string RemoveSignatureNodes(string xml)
         {
-            Chilkat.Xml xmlDoc = new Chilkat.Xml();
+            XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(xml);
-            var signatureNode = xmlDoc.SearchForTag(xmlDoc, "Signature");
-            if (signatureNode != null)
+
+            XmlNodeList signatureNodes = xmlDoc.GetElementsByTagName("Signature");
+
+            if (signatureNodes != null)
             {
-                while (signatureNode != null)
+                int index = 0;
+                while (index < signatureNodes.Count)
                 {
-                    signatureNode.RemoveFromTree();
-                    signatureNode = xmlDoc.SearchForTag(xmlDoc, "Signature");
+                    signatureNodes[index].ParentNode.RemoveChild(signatureNodes[index]);
                 }
-                return RemoveInvalidCharsXml(xmlDoc.GetXml());
+                return RemoveInvalidCharsXml(xmlDoc.OuterXml);
             }
             else
             {
                 return xml;
             }
+            
         }
     }
 }
