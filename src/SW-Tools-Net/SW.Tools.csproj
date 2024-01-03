@@ -104,5 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ChilkatDnCore" Version="9.5.0.70" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.0" />
   </ItemGroup>
 </Project>
