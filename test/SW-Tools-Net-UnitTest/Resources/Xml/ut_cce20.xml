@@ -1,0 +1,37 @@
+﻿<?xml version= "1.0" encoding= "utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation= "http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/ComercioExterior20 http://www.sat.gob.mx/sitio_internet/cfd/ComercioExterior20/ComercioExterior20.xsd" xmlns:cce20= "http://www.sat.gob.mx/ComercioExterior20" Version= "4.0" Serie= "Serie" Folio= "Folio1" Fecha= "2024-01-24T00:00:00"
+    Sello= "d8GkgPj96S+f1k6q9bJPWcYHIiw13R6vm2Vnwq+thvCLptMJYzm8tTChvgE7YUd98dGJ/CqVaQx9NbeideFLPIas4xx0oHut6RYOGP5y6KuQUOaHwHTrJoxdI1qnt0TiMCeT8ftonVisxcSubKGP3oS4n46ksAh+akiXXD+7IAJrdzBtM9t4FLa4GY5DIyIgkJtnlGvtY9/mXDBldkwDgX0bZHIr2Er3EPMpxDd8PsVY0MwmyU0o5d60Ib4SZ2uHkdTs8LfU6pUzPYaElnd/TG9iN5fiGQLQnT7NekeyVuWuf7K6bZu9jzh17LjWEIINHPfVFlEkNoMqom4xvt/EdQ==" FormaPago= "01" NoCertificado= "30001000000500003431" Certificado= "MIIFrTCCA5WgAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MzEwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTI0MjE0WhcNMjcwNTE4MTI0MjE0WjCB1DEmMCQGA1UEAxQdSEVSUkVSSUEgJiBFTEVDVFJJQ09TIFMgREUgQ1YxJjAkBgNVBCkUHUhFUlJFUklBICYgRUxFQ1RSSUNPUyBTIERFIENWMSYwJAYDVQQKFB1IRVJSRVJJQSAmIEVMRUNUUklDT1MgUyBERSBDVjElMCMGA1UELRQcSCZFOTUxMTI4NDY5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqHjtcPT4v+K0jXrhGsx+8sSS1eJ9LxCnY3/qaodXPFEik04VtM6N5as4ECs88L5zSkg182dOynfOPWAtH8Iy4Tqs39WNvvOeyIAUSvcKBU3NJtJDG93z+Eb3ExIw6NJ1fVivLtFFxVHDiJR4aZMzWixqt+tHyaOdoJ4s1qEezDZRidn0LJGgi5f+Zi6wYh51IlhJipiH0b1r/tl8tdMMxpgIr2rHGKodg+OtT/JC1xZSqpsLWJrXobTWGIuzZTVvAMIqyYzyoQwhE7hF/gWwnrcQESZWiPdpMgxhTGtTId28lAVePY+i5fi0VkotqrMf7MbtFWXqrTzw+4x084l0KQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAdmYSUf2x1PaZ8lV2/xteUmmEBNULVIlr1l9l9RId111iymbJN8SrQmLh/8fvR8mR02iMOSQHI6330krcv8Xh/fs4U237kT62jfeezE9ZMtfbKnAxWbAJXyA6sAz2MbwJblLyA/m/NjuJirVEtTnOK8ARNrUwg2Mr1yKWjH3yi1Nx5qksYDvki7082hxA0EV7HxF6xoMFO6EGStdAoHd3m4T8VQ2hz392u35TiDair7CXA02eue7RIQLvT9BdJl2AcDdo2hLe8Pok5+HLJkLOre2akwoMttif8PZjAxIjwcecw7O+l4BOxeO8g5HGxjgvI9YMADptQxh6wh+uQhM2SFtVzM9un8JCIuxTzFA93yvoPswuZiMMMoDIv4Qa6mkI6I+BuaAVL5k6v8qSe9+EDSsNgdhIX4sg0Vyf5INxCv1uhqXcvfK55x9m0KNC2+pQR3aOKjwhFxoOqgsQ+shrhVU9MnYh18vKRwMcwJ+JNG9weEtpp+IP3VRg8ymx6YZaH3aUya8XGKefGOJvCDI0rP4CRJ31U+hPEj+RslE5qxpLHAYxvUG+0lN9gPreLXignsj1cIMlXeFjueqqmUxUYrXJpK+pF2TZId6INxHtBx2VUuDu/lvmkdKu0uqfE+LKwF9tgROF4ziI++RckYLscBmYFV4ZikhEfhkPnNYSGgc=" CondicionesDePago= "CondicionesDePago" SubTotal= "400" Moneda= "MXN"
+    TipoCambio= "1" Total= "400" TipoDeComprobante= "I" Exportacion= "02" MetodoPago= "PUE" LugarExpedicion= "20000"
+    xmlns:cfdi= "http://www.sat.gob.mx/cfd/4" xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance">
+  <cfdi:Emisor Rfc= "H&amp;E951128469" Nombre= "HERRERIA &amp; ELECTRICOS" RegimenFiscal= "601" />
+  <cfdi:Receptor Rfc= "XEXX010101000" Nombre= "U.S. &amp; SW" DomicilioFiscalReceptor= "20000" ResidenciaFiscal= "USA" NumRegIdTrib= "123456789"
+      RegimenFiscalReceptor= "616" UsoCFDI= "CP01" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ= "51241200" NoIdentificacion= "131494-1055" Cantidad= "1.0" ClaveUnidad= "H87" Unidad= "Pieza"
+        Descripcion= "FORMULA MAGISTRAL" ValorUnitario= "200.00" Importe= "200.00" ObjetoImp= "01">
+      <cfdi:Parte ClaveProdServ= "51241200" NoIdentificacion= "IM050" Cantidad= "1.0" Unidad= "PIEZA" Descripcion= "25311FM00239 (LUARIL ETER SULFATO DE SODIO VEHICULO CBP 300ML), ACEITE AJONJOLI 150CC, ACEITE DE ALMENDRAS DULCES 150CC, TALCO 10GR, OXIDO DE ZINC 10GR."
+          ValorUnitario= "736.89" Importe= "736.89" />
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ= "51241200" NoIdentificacion= "131494-1055" Cantidad= "1.0" ClaveUnidad= "H87" Unidad= "Pieza"
+        Descripcion= "FORMULA MAGISTRAL" ValorUnitario= "200.00" Importe= "200.00" ObjetoImp= "01">
+      <cfdi:Parte ClaveProdServ= "51241200" NoIdentificacion= "IM020" Cantidad= "1.0" Unidad= "PIEZA" Descripcion= "25311FM00114 CREMA FUNGICIDA 35ML (ACIDO UNDECILENICO, ARBOL DEL TE VEHICULO EMOLIENTE)"
+          ValorUnitario= "172.50" Importe= "172.50" />
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Complemento>
+    <cce20:ComercioExterior Version= "2.0" ClaveDePedimento= "A1" CertificadoOrigen= "0" Incoterm= "FOB"
+        TipoCambioUSD= "17.1125" TotalUSD= "20.00">
+      <cce20:Emisor>
+        <cce20:Domicilio Calle= "CALLE DEL PAPEL" Colonia= "0214" Localidad= "01" Municipio= "014" Estado= "QUE" Pais= "MEX"
+            CodigoPostal= "76199" />
+      </cce20:Emisor>
+      <cce20:Receptor NumRegIdTrib= "123456789">
+        <cce20:Domicilio Calle= "ST. A" Estado= "TX" Pais= "USA" CodigoPostal= "00000" />
+      </cce20:Receptor>
+      <cce20:Mercancias>
+        <cce20:Mercancia NoIdentificacion= "131494-1055" FraccionArancelaria= "2402200100" CantidadAduana= "2"
+            UnidadAduana= "01" ValorUnitarioAduana= "10.00" ValorDolares= "20.00" />
+      </cce20:Mercancias>
+    </cce20:ComercioExterior>
+  </cfdi:Complemento>
+</cfdi:Comprobante>

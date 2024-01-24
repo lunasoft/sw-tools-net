@@ -53,6 +53,9 @@
     <None Update="Resources\Xml\ut_cancelation_Signed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Xml\ut_cce20.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Xml\ut_cfdi40.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
