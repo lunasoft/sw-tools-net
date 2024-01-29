@@ -77,5 +77,14 @@ namespace SW.Tools.UnitTest
                 ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), "password");
             CustomAssert.ResultIsError(result);
         }
+        [Fact]
+        public void Sign_Cfdi40WithComplementCCE20_Success()
+        {
+            var result = _sign.SignCfdi(ResourceHelper.GetInvoice("cce20.xml"),
+                ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), _password);
+            CustomAssert.ResultIsSuccess(result);
+            Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
+            CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
+        }
     }
 }
