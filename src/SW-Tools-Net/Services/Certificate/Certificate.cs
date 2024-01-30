@@ -1,5 +1,6 @@
 ﻿using SW.Tools.Entities.Response;
 using SW.Tools.Handlers;
+using SW.Tools.Commons.Enum;
 
 namespace SW.Tools.Services.Certificate;
 
@@ -11,7 +12,7 @@ public class Certificate : CertificateService, ICertificate<CertificateResponse>
     /// </summary>
     public Certificate()
     {
-        _handler = new();
+        _handler = new CertificateServiceHandler();
     }
 
     /// <summary>
@@ -20,6 +21,19 @@ public class Certificate : CertificateService, ICertificate<CertificateResponse>
     /// <returns>Un objeto CertificateResponse que contiene el PFX creado en formato de bytes.</returns>
     public CertificateResponse CreatePfx(byte[] publicCertificate, byte[] privateKey, string password)
     {
-        return _handler.Execute(() => CertificatePfxService(publicCertificate, privateKey, password));
+        var response = new CertificateResponse();
+        try
+        {
+            byte[] pfxBytes = CertificatePfxService(publicCertificate, privateKey, password);
+                        
+            response.SetData(new CertificateResponseData(pfxBytes));
+            response.SetStatus(ResponseStatus.success);
+        }
+        catch (Exception ex)
+        {
+            response.SetMessage(ex.Message);
+            response.SetStatus(ResponseStatus.error);
+        }
+        return response;
     }
 }
