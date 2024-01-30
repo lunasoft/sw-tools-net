@@ -127,6 +127,20 @@ var result = certificate.CreatePfx(bytesCer, bytesKey, passwordCer);
 var pfx = result.Data.Pfx;
 ```
 
+### Leer PFX
+
+```csharp
+using SW.Tools.Services.Certificate;
+
+byte[] bytesPfx = File.ReadAllBytes("h&e951128469.pfx");
+string passwordPfx = "12345678a";
+
+Certificate certificate = new();
+var result = certificate.ReadPfx(bytesPfx, passwordPfx);
+var publicCert = result.Data.PublicCert;
+var privateCert = result.Data.PrivateCert;
+```
+
 ## Contribuir
 
 Si deseas contribuir, puedes hacerlo a través de pull requests y reportando el issue [aqui](https://github.com/lunasoft/sw-tools-net/issues).
@@ -139,6 +153,11 @@ Si requieres soporte, envíanos un correo a [soporte@sw.com.mx](mailto:soporte@s
 
 - <https://github.com/SwAeyrton>
 - <https://www.linkedin.com/in/aeyrtonvs/>
+
+**Sebastian Vidal**
+
+- <https://github.com/SebastianSW>
+- <https://www.linkedin.com/in/vidalsd/>
 
 ## Licencia
 
