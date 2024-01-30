@@ -36,4 +36,29 @@ public class Certificate : CertificateService, ICertificate<CertificateResponse>
         }
         return response;
     }
+
+    /// <summary>
+    /// Lee un archivo PFX y su respectiva contraseña para recuperar el certificado publico y privado.
+    /// </summary>
+    /// <returns>Un objeto CertificateResponse que contiene el certificado publico y privado en formato de bytes.</returns>
+    public CertificateResponse ReadPfx(byte[] pfxBytes, string password)
+    {
+        var response = new CertificateResponse();
+        try
+        {
+            byte[] publicCert;
+            byte[] privateCert;
+
+            ReadPfxService(pfxBytes, password, out publicCert, out privateCert);
+
+            response.SetData(new CertificateResponseData(publicCert, privateCert));
+            response.SetStatus(ResponseStatus.success);
+        }
+        catch (Exception ex)
+        {
+            response.SetMessage(ex.Message);
+            response.SetStatus(ResponseStatus.error);
+        }
+        return response;
+    }
 }

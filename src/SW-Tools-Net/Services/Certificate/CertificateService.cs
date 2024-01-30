@@ -1,5 +1,6 @@
 ﻿using Chilkat;
 using SW.Tools.Validations;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace SW.Tools.Services.Certificate;
@@ -32,6 +33,32 @@ public class CertificateService
             byte[] contenidoPfx = pfx.ToBinary(password);
 
             return contenidoPfx;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    internal void ReadPfxService(byte[] pfxBytes, string password, out byte[] publicCert, out byte[] privateCert)
+    {
+         if (pfxBytes == null || pfxBytes.Length == 0 || string.IsNullOrEmpty(password))
+        {
+            throw new Exception("Los parámetros PFX y contraseña son requeridos."); 
+        }
+
+        try
+        {
+            X509Certificate2 certificate = new(pfxBytes, password, X509KeyStorageFlags.Exportable);
+
+            if (!certificate.HasPrivateKey)
+            {
+                throw new Exception("El archivo PFX es incorrecto o la contraseña es invalida.");
+            }    
+                
+            publicCert = certificate.Export(X509ContentType.Cert);
+            privateCert = certificate.Export(X509ContentType.Pfx, password);
+
         }
         catch (Exception ex)
         {
