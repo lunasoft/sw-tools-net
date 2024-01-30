@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Cancelacion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://cancelacfd.sat.gob.mx"
+    Fecha="2023-07-11T18:25:01" RfcEmisor="H&amp;E951128469">
+  <Folios>
+    <Folio UUID="6c98ce44-6e60-4ec1-bab1-2a4899775450" Motivo="01" />
+  </Folios><Signature></Signature>
+</Cancelacion>

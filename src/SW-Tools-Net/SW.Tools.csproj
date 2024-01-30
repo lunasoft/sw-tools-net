@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <RootNamespace>SW.Tools</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<VersionPrefix>0.0.6.1</VersionPrefix>
+	<Product>SW.Tools.NET</Product>
+	<Company>SW Sapien</Company>
+	<Authors>SW_Aeyrton</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\Xslt\Cfdi40\aerolineas.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\CartaPorte20.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\CartaPorte30.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\certificadodedestruccion.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\cfdi40.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\cfdiregistrofiscal.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\ComercioExterior11.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\ComercioExterior20.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\consumodeCombustibles11.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\detallista.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\divisas.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\donat11.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\ecc12.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\GastosHidrocarburos10.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\iedu.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\implocal.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\ine11.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\IngresosHidrocarburos.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\leyendasFisc.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\nomina12.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\notariospublicos.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\obrasarteantiguedades.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\pagoenespecie.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\pagos20.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\pfic.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\renovacionysustitucionvehiculos.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\servicioparcialconstruccion.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\TuristaPasajeroExtranjero.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\utilerias.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\valesdedespensa.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\vehiculousado.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\ventavehiculos11.xslt" />
+    <None Remove="Resources\Xslt\Retention20\arrendamientoenfideicomiso.xslt" />
+    <None Remove="Resources\Xslt\Retention20\dividendos.xslt" />
+    <None Remove="Resources\Xslt\Retention20\enajenaciondeacciones.xslt" />
+    <None Remove="Resources\Xslt\Retention20\fideicomisonoempresarial.xslt" />
+    <None Remove="Resources\Xslt\Retention20\intereses.xslt" />
+    <None Remove="Resources\Xslt\Retention20\intereseshipotecarios.xslt" />
+    <None Remove="Resources\Xslt\Retention20\operacionesconderivados.xslt" />
+    <None Remove="Resources\Xslt\Retention20\pagosaextranjeros.xslt" />
+    <None Remove="Resources\Xslt\Retention20\planesderetiro11.xslt" />
+    <None Remove="Resources\Xslt\Retention20\premios.xslt" />
+    <None Remove="Resources\Xslt\Retention20\retencion20.xslt" />
+    <None Remove="Resources\Xslt\Retention20\sectorfinanciero.xslt" />
+    <None Remove="Resources\Xslt\Retention20\ServiciosPlataformasTecnologicas10.xslt" />
+    <None Remove="Resources\Xslt\Retention20\utilerias.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\aerolineas.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\CartaPorte20.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\CartaPorte30.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\certificadodedestruccion.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\cfdi40.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\cfdiregistrofiscal.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\ComercioExterior11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\ComercioExterior20.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\consumodeCombustibles11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\detallista.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\divisas.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\donat11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\ecc12.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\GastosHidrocarburos10.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\iedu.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\implocal.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\ine11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\IngresosHidrocarburos.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\leyendasFisc.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\nomina12.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\notariospublicos.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\obrasarteantiguedades.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\pagoenespecie.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\pagos20.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\pfic.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\renovacionysustitucionvehiculos.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\servicioparcialconstruccion.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\TuristaPasajeroExtranjero.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\utilerias.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\valesdedespensa.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\vehiculousado.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\ventavehiculos11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\arrendamientoenfideicomiso.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\dividendos.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\enajenaciondeacciones.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\fideicomisonoempresarial.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\intereses.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\intereseshipotecarios.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\operacionesconderivados.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\pagosaextranjeros.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\planesderetiro11.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\premios.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\retencion20.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\sectorfinanciero.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\ServiciosPlataformasTecnologicas10.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Retention20\utilerias.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ChilkatDnCore" Version="9.5.0.70" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.0" />
+  </ItemGroup>
+</Project>

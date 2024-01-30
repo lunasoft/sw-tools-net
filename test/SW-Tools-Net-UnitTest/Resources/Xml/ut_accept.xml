@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SolicitudAceptacionRechazo Fecha="2018-09-20T14:48:09" RfcPacEnviaSolicitud="LSO1306189R5" RfcReceptor="H&amp;E951128469"
+    xmlns="http://cancelacfd.sat.gob.mx"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Folios>
+        <UUID>ec30c5ea-4ef8-491a-9969-e41a9663bb42</UUID>
+        <Respuesta>Aceptacion</Respuesta>
+    </Folios>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <Reference URI="">
+                <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <DigestValue>Yat7O02K9e0vvuH8ARwL90pKVbo=</DigestValue>
+            </Reference>
+        </SignedInfo>
+        <SignatureValue>VCGkx1D7W+9uur01xobNEFOKR/8hRdhOYsPKZpT3XE+qHu6Fa7a/eO5acj8VpCZqNnxDo1N0DwU6HKmbRge9L2nolSBEoYHqZbc6eSd4QkD9Z+kKcgWh911kBsWH5TBL6aZDP9kJ5DRv4GhDrUP0WhAxUufCY1PaRX5lp+zgp+D4ujNkl7H+4eeDOWirlyWlah16SdCNV+SA3X97Xqh9a6qotx0vrCj1TRd+c+XccEnvQnAXHPIWzFem51QznvjKX2vAL5+KayfANYdHbsHfmBOxFcPW9/ZmO4WzTC8LftaJn4ITF3oE86g58xMmxfK6bP26lFjKQ4t+j9ZgC9BL/Q==</SignatureValue>
+        <KeyInfo>
+            <X509Data>
+                <X509Certificate>MIIFrTCCA5WgAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MzEwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTI0MjE0WhcNMjcwNTE4MTI0MjE0WjCB1DEmMCQGA1UEAxQdSEVSUkVSSUEgJiBFTEVDVFJJQ09TIFMgREUgQ1YxJjAkBgNVBCkUHUhFUlJFUklBICYgRUxFQ1RSSUNPUyBTIERFIENWMSYwJAYDVQQKFB1IRVJSRVJJQSAmIEVMRUNUUklDT1MgUyBERSBDVjElMCMGA1UELRQcSCZFOTUxMTI4NDY5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqHjtcPT4v+K0jXrhGsx+8sSS1eJ9LxCnY3/qaodXPFEik04VtM6N5as4ECs88L5zSkg182dOynfOPWAtH8Iy4Tqs39WNvvOeyIAUSvcKBU3NJtJDG93z+Eb3ExIw6NJ1fVivLtFFxVHDiJR4aZMzWixqt+tHyaOdoJ4s1qEezDZRidn0LJGgi5f+Zi6wYh51IlhJipiH0b1r/tl8tdMMxpgIr2rHGKodg+OtT/JC1xZSqpsLWJrXobTWGIuzZTVvAMIqyYzyoQwhE7hF/gWwnrcQESZWiPdpMgxhTGtTId28lAVePY+i5fi0VkotqrMf7MbtFWXqrTzw+4x084l0KQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAdmYSUf2x1PaZ8lV2/xteUmmEBNULVIlr1l9l9RId111iymbJN8SrQmLh/8fvR8mR02iMOSQHI6330krcv8Xh/fs4U237kT62jfeezE9ZMtfbKnAxWbAJXyA6sAz2MbwJblLyA/m/NjuJirVEtTnOK8ARNrUwg2Mr1yKWjH3yi1Nx5qksYDvki7082hxA0EV7HxF6xoMFO6EGStdAoHd3m4T8VQ2hz392u35TiDair7CXA02eue7RIQLvT9BdJl2AcDdo2hLe8Pok5+HLJkLOre2akwoMttif8PZjAxIjwcecw7O+l4BOxeO8g5HGxjgvI9YMADptQxh6wh+uQhM2SFtVzM9un8JCIuxTzFA93yvoPswuZiMMMoDIv4Qa6mkI6I+BuaAVL5k6v8qSe9+EDSsNgdhIX4sg0Vyf5INxCv1uhqXcvfK55x9m0KNC2+pQR3aOKjwhFxoOqgsQ+shrhVU9MnYh18vKRwMcwJ+JNG9weEtpp+IP3VRg8ymx6YZaH3aUya8XGKefGOJvCDI0rP4CRJ31U+hPEj+RslE5qxpLHAYxvUG+0lN9gPreLXignsj1cIMlXeFjueqqmUxUYrXJpK+pF2TZId6INxHtBx2VUuDu/lvmkdKu0uqfE+LKwF9tgROF4ziI++RckYLscBmYFV4ZikhEfhkPnNYSGgc=</X509Certificate>
+                <X509IssuerSerial>
+                    <X509IssuerName>CN=AC UAT, O=SERVICIO DE ADMINISTRACION TRIBUTARIA, OU=SAT-IES Authority, E=oscar.martinez@sat.gob.mx, STREET=3ra cerrada de caliz, PostalCode=06370, C=MX, ST=CIUDAD DE MEXICO, L=COYOACAN, OID.2.5.4.45=2.5.4.45, OID.1.2.840.113549.1.9.2=responsable: ACDMA-SAT</X509IssuerName>
+                    <X509SerialNumber>3330303031303030303030353030303033343331</X509SerialNumber>
+                </X509IssuerSerial>
+            </X509Data>
+        </KeyInfo>
+    </Signature>
+</SolicitudAceptacionRechazo>
