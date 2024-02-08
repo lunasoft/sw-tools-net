@@ -6,14 +6,12 @@ namespace SW.Tools.Services.Certificate;
 public class Certificate : CertificateService, ICertificate<CertificateResponse> 
 {
     private readonly CertificateServiceHandler _handler;
-    private readonly PfxServiceHandler _handler2;
     /// <summary>
     /// Contiene un método para realizar la creación de un PFX en formato de bytes.
     /// </summary>
     public Certificate()
     {
         _handler = new();
-        _handler2 = new();
     }
 
     /// <summary>
@@ -31,6 +29,6 @@ public class Certificate : CertificateService, ICertificate<CertificateResponse>
     /// <returns>Un objeto PfxResponse que contiene el certificado publico y privado en formato de bytes.</returns>
     public PfxResponse ReadPfx(byte[] pfxBytes, string password)
     {
-        return _handler2.Execute(() => ReadPfxService(pfxBytes, password));
+        return _handler.Execute(() => ReadPfxService(pfxBytes, password));
     }
 }

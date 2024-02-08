@@ -41,7 +41,7 @@ public class CertificateService
         }
     }
 
-    internal PfxResponseData ReadPfxService(byte[] pfxBytes, string password)
+    internal (byte [], byte []) ReadPfxService(byte[] pfxBytes, string password)
     {
         try
         {
