@@ -20,6 +20,15 @@ public class Certificate : CertificateService, ICertificate<CertificateResponse>
     /// <returns>Un objeto CertificateResponse que contiene el PFX creado en formato de bytes.</returns>
     public CertificateResponse CreatePfx(byte[] publicCertificate, byte[] privateKey, string password)
     {
-        return _handler.Execute(() => CertificatePfxService(publicCertificate, privateKey, password));
+       return _handler.Execute(() => CertificatePfxService(publicCertificate, privateKey, password));
+    }
+
+    /// <summary>
+    /// Lee un archivo PFX y su respectiva contraseña para recuperar el certificado publico y privado.
+    /// </summary>
+    /// <returns>Un objeto PfxResponse que contiene el certificado publico y privado en formato de bytes.</returns>
+    public PfxResponse ReadPfx(byte[] pfxBytes, string password)
+    {
+        return _handler.Execute(() => ReadPfxService(pfxBytes, password));
     }
 }
