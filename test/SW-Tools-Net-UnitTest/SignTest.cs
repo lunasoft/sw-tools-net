@@ -23,8 +23,8 @@ namespace SW.Tools.UnitTest
             CustomAssert.ResultIsSuccess(result);
             Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
             CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
-        }       
-        [Fact]
+        }
+        [Fact(Skip = "Carta Porte 3.0 no vigente")]
         public void Sign_Cfdi40WithComplement_Success()
         {
             var result = _sign.SignCfdi(ResourceHelper.GetInvoice("cp30.xml"),
@@ -33,6 +33,7 @@ namespace SW.Tools.UnitTest
             Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
             CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
         }
+
         [Fact]
         public void Sign_Retention20_Success()
         {
@@ -77,7 +78,7 @@ namespace SW.Tools.UnitTest
                 ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), "password");
             CustomAssert.ResultIsError(result);
         }
-        [Fact(Skip = "TipoCambioUSD changes every day")]
+        [Fact(Skip = "TipoCambioUSD cambia todos los dias")]
         public void Sign_Cfdi40WithComplementCCE20_Success()
         {
             var result = _sign.SignCfdi(ResourceHelper.GetInvoice("cce20.xml"),
