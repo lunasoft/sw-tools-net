@@ -24,6 +24,15 @@ namespace SW.Tools.UnitTest
             Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
             CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
         }
+        [Fact]
+        public void Sign_Cfdi40_Hyp_Success()
+        {
+            var result = _sign.SignCfdi(ResourceHelper.GetInvoice("cfdi40_hyp.xml"),
+                ResourceHelper.GetCertResource("pfx_h&e951128469.pfx"), _password);
+            CustomAssert.ResultIsSuccess(result);
+            Assert.True(!String.IsNullOrEmpty(result.Data.Xml));
+            CustomAssert.StampIsSuccess(_stamp, result.Data.Xml);
+        }
         [Fact(Skip = "Carta Porte 3.0 no vigente")]
         public void Sign_Cfdi40WithComplement_Success_Old()
         {
