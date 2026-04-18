@@ -8,6 +8,7 @@ namespace SW.Tools.UnitTest
     {
         private readonly byte[] _bytesCer;
         private readonly byte[] _bytesKey;
+        private readonly byte[] _bytesPfx;
         private readonly string _password;
         private readonly Certificate _certificate;
 
@@ -15,6 +16,7 @@ namespace SW.Tools.UnitTest
         {
             _bytesCer = BuildTest.publicCertificate;
             _bytesKey = BuildTest.privateKey;
+            _bytesPfx = BuildTest.pfx;
             _password = BuildTest.passwordCer;
             _certificate = new();
         }
@@ -62,6 +64,35 @@ namespace SW.Tools.UnitTest
         {
             var result = _certificate.CreatePfx(_bytesCer, _bytesCer, _password);
             var message = "La llave privada es incorrecta o la contraseña es invalida.";
+            CustomAssert.ResultIsError(result, message);
+        }
+        [Fact]
+        public void ReadPfx_Success()
+        {
+            var result = _certificate.ReadPfx(_bytesPfx, _password);
+            var publicCertificate = result.Data.PublicCert;
+            var privateCert = result.Data.PrivateCert;
+            Assert.True(publicCertificate != null);
+            Assert.True(privateCert != null);
+            Assert.True(result.Status == "success");
+            CustomAssert.ResultIsSuccess(result);
+            X509Certificate x509 = new(publicCertificate);
+            Assert.True(x509.GetPublicKey() != null);
+            x509 = new(privateCert, _password);
+            Assert.True(x509.GetPublicKey() != null);
+        }
+        [Fact]
+        public void ReadPfx_InvalidPassword_Error()
+        {
+            var result = _certificate.ReadPfx(_bytesCer, "12345");
+            var message = "El archivo PFX es incorrecto o la contraseña es invalida.";
+            CustomAssert.ResultIsError(result, message);
+        }
+        [Fact]
+        public void ReadPfx_PfxNull_Error()
+        {
+            var result = _certificate.ReadPfx(null, _password);
+            var message = "Los parámetros PFX y contraseña son requeridos.";
             CustomAssert.ResultIsError(result, message);
         }
     }

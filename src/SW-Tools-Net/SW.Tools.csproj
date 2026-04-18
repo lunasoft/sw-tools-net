@@ -3,7 +3,7 @@
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <RootNamespace>SW.Tools</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-	<VersionPrefix>0.0.6.1</VersionPrefix>
+	<VersionPrefix>0.0.9.1</VersionPrefix>
 	<Product>SW.Tools.NET</Product>
 	<Company>SW Sapien</Company>
 	<Authors>SW_Aeyrton</Authors>
@@ -12,6 +12,7 @@
     <None Remove="Resources\Xslt\Cfdi40\aerolineas.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\CartaPorte20.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\CartaPorte30.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\CartaPorte31.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\certificadodedestruccion.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\cfdi40.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\cfdiregistrofiscal.xslt" />
@@ -23,6 +24,7 @@
     <None Remove="Resources\Xslt\Cfdi40\donat11.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\ecc12.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\GastosHidrocarburos10.xslt" />
+    <None Remove="Resources\Xslt\Cfdi40\hidrocarburospetroliferos.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\iedu.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\implocal.xslt" />
     <None Remove="Resources\Xslt\Cfdi40\ine11.xslt" />
@@ -60,6 +62,7 @@
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\aerolineas.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\CartaPorte20.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\CartaPorte30.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\CartaPorte31.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\certificadodedestruccion.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\cfdi40.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\cfdiregistrofiscal.xslt" />
@@ -71,6 +74,7 @@
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\donat11.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\ecc12.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\GastosHidrocarburos10.xslt" />
+    <EmbeddedResource Include="Resources\Xslt\Cfdi40\hidrocarburospetroliferos.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\iedu.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\implocal.xslt" />
     <EmbeddedResource Include="Resources\Xslt\Cfdi40\ine11.xslt" />
